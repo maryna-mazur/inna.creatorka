@@ -1,43 +1,50 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 export default function BackgroundVideo() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
+    const tryPlay = async () => {
+        const v = videoRef.current;
+        if (!v) return;
 
-    video.muted = true;
-    const playPromise = video.play();
+        // iOS любит, когда это выставлено максимально явно
+        v.muted = true;
+        v.defaultMuted = true;
+        v.volume = 0;
 
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        const resume = () => {
-          video.play().catch(() => {});
-          document.removeEventListener("click", resume);
-          document.removeEventListener("touchstart", resume);
-          document.removeEventListener("scroll", resume);
-        };
-        document.addEventListener("click", resume, { once: true });
-        document.addEventListener("touchstart", resume, { once: true });
-        document.addEventListener("scroll", resume, { once: true });
-      });
-    }
-  }, []);
+        v.setAttribute("playsinline", "true");
+        v.setAttribute("webkit-playsinline", "true");
 
-  return (
-    <div className="absolute inset-0 z-0">
-      <video
-        ref={videoRef}
-        muted
-        loop
-        playsInline
-        className="w-full h-full object-cover md:object-center"
-      >
-        <source src="/hero-bg.MP4" type="video/mp4" />
-      </video>
-    </div>
-  );
+        try {
+            await v.play();
+        } catch {
+            // если всё равно заблокировано — стартуем после первого жеста
+            const resume = async () => {
+                try { await v.play(); } catch {}
+            };
+            window.addEventListener("touchstart", resume, { once: true, passive: true });
+            window.addEventListener("click", resume, { once: true });
+        }
+    };
+
+    return (
+        <div className="absolute inset-0 z-0 pointer-events-none">
+            <video
+                ref={videoRef}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/hero-poster.jpg"
+                disablePictureInPicture
+                className="w-full h-full object-cover"
+                onCanPlay={tryPlay}
+            >
+                <source src="/hero-bg-ios.mp4" type="video/mp4" />
+            </video>
+        </div>
+    );
 }

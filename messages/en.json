@@ -1,0 +1,42 @@
+{
+  "Metadata": {
+    "title": "Inna | Creatorka — MAC Cards & Guidance",
+    "description": "Express MAC card reading, individual guidance and consultations"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "express": "Express Reading",
+    "faq": "FAQ",
+    "contacts": "Contacts"
+  },
+  "Hero": {
+    "greeting": "HI, I'm",
+    "name": "Inna",
+    "cta": "Work with me",
+    "tag1": "MAC concepts",
+    "tag2": "Original products",
+    "tag3": "Turnkey launch",
+    "tag4": "Methodology",
+    "tag5": "Team formats"
+  },
+  "About": {
+    "title": "About me"
+  },
+  "ExpressAnalysis": {
+    "title": "Express Reading"
+  },
+  "Services": {
+    "title": "Services"
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions"
+  },
+  "Footer": {
+    "copyright": "© 2026 Inna Creatorka. All rights reserved.",
+    "telegram": "Telegram",
+    "instagram": "Instagram"
+  },
+  "Cards": {}
+}

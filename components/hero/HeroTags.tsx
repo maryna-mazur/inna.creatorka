@@ -11,44 +11,50 @@ type Tag = {
   Icon: ComponentType<{ className?: string }>;
   arrowClass: string;
   side: "left" | "right";
-  position: string;
+  mobilePosition: string;
+  desktopPosition: string;
 };
 
 const tags: Tag[] = [
   {
     key: "tag1",
     Icon: ArrowIcon,
-    arrowClass: "",
+    arrowClass: "relative -left-[20vw] -bottom-[7vh] -rotate-[40deg] sm:-left-[20vw] sm:-bottom-[6vh] sm:-rotate-[30deg] md:left-0 md:bottom-0 md:rotate-0",
     side: "left",
-    position: "left-[6vw] lg:left-[10vw] 2xl:left-[10vw] 3xl:left-[14vw] 4xl:left-[10vw] top-[32vh]",
+    mobilePosition: "left-[8vw] bottom-[30vh] sm:left-[4vw] sm:bottom-[26vh] md:left-[8vw] md:bottom-[28vh] lg:bottom-[36vh]",
+    desktopPosition: "xl:left-[6vw] 2xl:left-[10vw] 3xl:left-[14vw] 4xl:left-[10vw] xl:top-[32vh] xl:bottom-auto",
   },
   {
     key: "tag2",
     Icon: Arrow7Icon,
-    arrowClass: "",
+    arrowClass: "relative -left-[12vw] -bottom-[4vh] -rotate-[20deg] sm:-left-[17vw] sm:-bottom-[4vh] sm:-rotate-[20deg] md:left-0 md:bottom-0 md:rotate-0",
     side: "left",
-    position: "left-[2.4vw] lg:left-[5vw] 2xl:left-[4vw] 3xl:left-[7vw] 4xl:left-[6vw] top-[52vh]",
+    mobilePosition: "left-[4vw] bottom-[17vh] sm:left-[4vw] sm:bottom-[16vh] md:left-[6vw] md:bottom-[15vh] lg:bottom-[19vh]",
+    desktopPosition: "xl:left-[5vw] 2xl:left-[4vw] 3xl:left-[7vw] 4xl:left-[6vw] xl:top-[52vh] xl:bottom-auto",
   },
   {
     key: "tag3",
     Icon: Arrow1Icon,
-    arrowClass: "rotate-x-180 -scale-x-100",
+    arrowClass: "rotate-x-180 -scale-x-100 relative -rotate-[60deg] -left-[4vw] bottom-[1vh] sm:-rotate-[20deg] sm:-left-[12vw] sm:-bottom-[1vh] md:left-0 md:bottom-0 md:rotate-0 xl:-left-[2vw] xl:-bottom-[2vh]",
     side: "left",
-    position: "left-[6vw] lg:left-[9vw] 2xl:left-[8vw] 3xl:left-[10vw] 4xl:left-[11vw] top-[72vh]",
+    mobilePosition: "relative left-[8vw] -bottom-[43vh] sm:absolute sm:left-[20vw] sm:bottom-[6vh] md:left-[20vw] md:bottom-[6vh] lg:left-[24vw] lg:bottom-[7vh]",
+    desktopPosition: "xl:left-[7vw] 2xl:left-[8vw] 3xl:left-[10vw] 4xl:left-[11vw] xl:top-[72vh] xl:bottom-auto",
   },
   {
     key: "tag4",
     Icon: Arrow2Icon,
-    arrowClass: "-scale-x-100 -rotate-[341deg]",
+    arrowClass: "-scale-x-100 relative -rotate-[25deg] -right-[18vw] -bottom-[4vh] sm:-right-[27vw] sm:-bottom-[5vh] sm:-rotate-[25deg] sm:-scale-y-100 md:-right-[6vw] md:-bottom-[5vh] md:-rotate-[380deg] md:scale-y-100 xl:bottom-0 xl:right-0",
     side: "right",
-    position: "right-[8vw] lg:right-[11vw] 2xl:right-[11vw] 3xl:right-[14vw] 4xl:right-[14vw] top-[48vh]",
+    mobilePosition: "relative -right-[23vw] -bottom-[12vh] sm:absolute sm:right-[9vw] sm:bottom-[28vh] lg:bottom-[35vh]",
+    desktopPosition: "xl:right-[6vw] 2xl:right-[11vw] 3xl:right-[14vw] 4xl:right-[14vw] xl:top-[48vh] xl:bottom-auto",
   },
   {
     key: "tag5",
     Icon: Arrow5Icon,
-    arrowClass: "scale-x-[-1] rotate-x-[2]",
+    arrowClass: "scale-x-[-1] rotate-x-[2] relative -right-[13vw] -bottom-[4vh] sm:-right-[20vw] sm:bottom-[5vh] sm:rotate-[45deg] md:-right-[2vw] md:bottom-[2vh] md:rotate-[30deg] xl:rotate-0 xl:bottom-0",
     side: "right",
-    position: "right-[3vw] lg:right-[5vw] 2xl:right-[8vw] 3xl:right-[7vw] 4xl:right-[8vw] top-[63vh]",
+    mobilePosition: "relative -right-[27vw] -bottom-[18vh] sm:absolute sm:right-[7vw] sm:bottom-[9vh] md:right-[7vw] md:bottom-[10vh] lg:bottom-[10vh]",
+    desktopPosition: "xl:right-[5vw] 2xl:right-[8vw] 3xl:right-[7vw] 4xl:right-[8vw] xl:top-[63vh] xl:bottom-auto",
   },
 ];
 
@@ -60,34 +66,22 @@ export default function HeroTags() {
       {tags.map((tag) => (
         <div
           key={tag.key}
-          className={`absolute hidden lg:block ${tag.position}`}
+          className={`absolute ${tag.mobilePosition} ${tag.desktopPosition}`}
         >
           <div
             className={`flex items-center gap-1 ${tag.side === "right" ? "flex-row-reverse" : ""}`}
           >
             <span
-              className={`text-center font-heading text-sm xl:text-base 2xl:text-base 3xl:text-lg 4xl:text-2xl  uppercase tracking-widest text-primary font-semibold leading-tight max-w-40 3xl:max-w-56 4xl:max-w-64`}
+              className="text-center font-heading text-[10px] sm:text-sm md:text-lg xl:text-lg 2xl:text-lg 3xl:text-2xl 4xl:text-3xl uppercase tracking-widest text-accent xl:text-primary font-semibold leading-tight max-w-20 sm:max-w-28 md:max-w-32 xl:max-w-40 3xl:max-w-56 4xl:max-w-64"
             >
               {t(tag.key)}
             </span>
             <tag.Icon
-              className={`${tag.arrowClass} opacity-70 text-primary w-16 h-16 xl:w-20 xl:h-20 2xl:w-22 2xl:h-22 3xl:w-32 3xl:h-32 4xl:w-44 4xl:h-44 shrink-0`}
+              className={`${tag.arrowClass} opacity-70 text-accent xl:text-primary sm:w-26 md:w-28 md:h-28 xl:w-20 xl:h-20 2xl:w-28 2xl:h-28 3xl:w-32 3xl:h-32 4xl:w-44 4xl:h-44 shrink-0`}
             />
           </div>
         </div>
       ))}
-
-      {/* Mobile — column below heading */}
-      <div className="flex flex-col items-center gap-3 mt-8 lg:hidden">
-        {tags.map((tag) => (
-          <span
-            key={tag.key}
-            className="font-body text-xs uppercase tracking-widest text-primary font-medium"
-          >
-            {t(tag.key)}
-          </span>
-        ))}
-      </div>ъ
     </>
   );
 }

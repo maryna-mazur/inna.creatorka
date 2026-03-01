@@ -17,9 +17,9 @@ export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="lg:hidden ml-3">
+    <div className="lg:hidden ml-2 sm:ml-3">
       <button
-        className="flex flex-col gap-1.5"
+        className="flex flex-col gap-1.5 hover:cursor-pointer scale-75"
         onClick={() => setOpen(!open)}
         aria-label="Menu"
       >
@@ -36,7 +36,7 @@ export default function MobileNav() {
               key={link.key}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="font-heading text-sm uppercase tracking-[0.2em] text-primary hover:text-accent transition-colors"
+              className="font-heading text-sm uppercase tracking-[0.2em] text-primary hover:text-teal-dark hover:font-medium transition-colors"
             >
               {t(link.key)}
             </Link>

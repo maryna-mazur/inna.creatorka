@@ -11,7 +11,7 @@
   --color-text: #2d2420;
   --color-text-light: #7a6b5d;
   --color-teal: #308e8e;
-  --color-teal-dark: rgba(3, 39, 87, 0.9);
+  --color-teal-dark: #2b5a74;
 
   --font-heading: var(--font-montserrat);
   --font-body: var(--font-inter);
@@ -19,7 +19,7 @@
 }
 
 @theme {
-  --breakpoint-sm: 640px;
+  --breakpoint-sm: 414px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;

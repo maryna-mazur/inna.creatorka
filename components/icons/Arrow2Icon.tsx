@@ -3,7 +3,7 @@ export default function Arrow2Icon({ className }: { className?: string }) {
     <svg
       viewBox="0 0 2048 1130"
       width="60"
-      height="33"
+      height="50"
       fill="currentColor"
       className={className}
       aria-hidden="true"

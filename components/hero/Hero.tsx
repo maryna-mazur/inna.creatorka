@@ -11,10 +11,39 @@ export default function HeroSection() {
 
       <Header />
 
+      {/* Mobile/tablet bottom gradient + progressive blur */}
+      <div className="absolute inset-x-0 bottom-0 z-10 h-[70vh] pointer-events-none xl:hidden">
+        {/* Color gradient overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent 0%, rgba(59,35,20,0.1) 15%, rgba(59,35,20,0.25) 30%, rgba(59,35,20,0.45) 43%, rgba(59,35,20,0.65) 55%, rgba(59,35,20,0.85) 68%, rgba(59,35,20,0.95) 80%, rgba(59,35,20,1) 100%)",
+          }}
+        />
+        {/* Progressive blur layers — each stronger, masked to its vertical band */}
+        <div
+          className="absolute inset-0 backdrop-blur-[1px]"
+          style={{ maskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 35%, transparent 50%)" }}
+        />
+        <div
+          className="absolute inset-0 backdrop-blur-[3px]"
+          style={{ maskImage: "linear-gradient(to bottom, transparent 25%, black 40%, black 55%, transparent 65%)" }}
+        />
+        <div
+          className="absolute inset-0 backdrop-blur-[6px]"
+          style={{ maskImage: "linear-gradient(to bottom, transparent 45%, black 60%, black 75%, transparent 85%)" }}
+        />
+        <div
+          className="absolute inset-0 backdrop-blur-[10px]"
+          style={{ maskImage: "linear-gradient(to bottom, transparent 65%, black 80%, black 100%)" }}
+        />
+      </div>
+
       <div className="relative z-20 flex flex-col items-center justify-center h-full px-6 2xl:px-10 3xl:px-16 4xl:px-24 max-w-[2560px] mx-auto w-full">
         <HeroHeading />
         <HeroTags />
-        <div className="absolute bottom-6 right-6 lg:bottom-6 lg:right-20 2xl:right-24 3xl:bottom-10 3xl:right-32 4xl:bottom-14 4xl:right-40 z-30 max-lg:right-0 max-lg:left-0 max-lg:flex max-lg:justify-center">
+        <div className="absolute bottom-6 right-6 xl:bottom-6 xl:right-20 2xl:right-24 3xl:bottom-10 3xl:right-32 4xl:bottom-14 4xl:right-40 z-30 max-xl:right-0 max-xl:left-0 max-xl:flex max-xl:justify-center">
           <HeroCTA />
         </div>
       </div>

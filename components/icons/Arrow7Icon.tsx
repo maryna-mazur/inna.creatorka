@@ -3,7 +3,7 @@ export default function Arrow7Icon({ className }: { className?: string }) {
     <svg
       viewBox="0 0 2048 1122"
       width="60"
-      height="33"
+      height="40"
       fill="currentColor"
       className={className}
       aria-hidden="true"
