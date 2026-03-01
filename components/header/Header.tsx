@@ -38,23 +38,23 @@ export default function Header() {
   }
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-30 px-6 py-4 md:px-10 md:py-6  ">
+    <header className="absolute top-0 left-0 right-0 z-30 px-6 py-4 md:px-10 2xl:px-16 3xl:px-18 4xl:px-20  pt-[calc(env(safe-area-inset-top)+1rem)]">
       <div className="flex items-center justify-between">
 
         <Link
           href="#"
-          className="font-logo text-2xl md:text-3xl text-primary"
+          className="font-logo text-2xl md:text-4xl 2xl:text-3xl 3xl:text-4xl 4xl:text-6xl text-primary"
           style={{ WebkitTextStroke: "0.5px" }}
         >
           inna.creatorka
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 lg:gap-10 ml-5">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-8 2xl:gap-10 3xl:gap-14 ml-5">
           {navLinks.map((link) => (
             <Link
               key={link.key}
               href={link.href}
-              className="font-heading text-sm lg:text-base uppercase font-medium tracking-[0.2em] text-primary-dark hover:text-accent transition-colors"
+              className="font-heading text-sm lg:text-base 2xl:text-base 3xl:text-xl uppercase font-medium tracking-[0.2em] text-primary-dark hover:text-accent transition-colors"
             >
               {t(link.key)}
             </Link>
@@ -62,8 +62,8 @@ export default function Header() {
         </nav>
 
 
-        <div className="flex items-center gap-4 lg:gap-6">
-          <div className="hidden md:flex items-center gap-2">
+        <div className="flex items-center gap-4 lg:gap-6 2xl:gap-8 3xl:gap-10 4xl:gap-12">
+          <div className="hidden lg:flex items-center gap-2 2xl:gap-3 3xl:gap-4 4xl:gap-5">
             {socials.map(({ label, href, Icon }) => (
               <a
                 key={label}
@@ -71,19 +71,19 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center hover:bg-primary/10 transition"
+                className="w-9 h-9 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12  rounded-full border border-primary/30 flex items-center justify-center hover:bg-primary/10 transition"
               >
-                <Icon className="text-primary" />
+                <Icon className="text-primary 2xl:w-5 2xl:h-5 3xl:w-6 3xl:h-6" />
               </a>
             ))}
           </div>
 
-          <div className="flex items-center gap-1 font-heading text-sm uppercase tracking-wide">
+          <div className="flex items-center gap-1 font-heading text-sm 2xl:text-lg 3xl:text-xl uppercase tracking-wide">
             {locales.map(({ code, label }) => (
               <button
                 key={code}
                 onClick={() => switchLocale(code)}
-                className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors hover:cursor-pointer ${
+                className={`w-9 h-9 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 2xl:text-sm 3xl:text-base font-medium rounded-full flex items-center justify-center transition-colors hover:cursor-pointer ${
                   locale === code
                     ? "bg-primary text-bg"
                     : "text-primary hover:text-accent-dark hover:bg-primary/10"

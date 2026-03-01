@@ -2,19 +2,30 @@
 
 @theme inline {
   /* === Palette: Current === */
-  --color-bg: #FFFDF5;
+  --color-bg: #fffdf5;
   --color-bg-dark: #f5f0e6;
-  --color-primary: #3B2314;
+  --color-primary: #3b2314;
   --color-primary-dark: #2a1a0e;
-  --color-accent: #FFB380;
+  --color-accent: #d4bfb0;
   --color-accent-dark: #e89a66;
   --color-text: #2d2420;
   --color-text-light: #7a6b5d;
-  --color-teal: #308E8E;
+  --color-teal: #308e8e;
+  --color-teal-dark: rgba(3, 39, 87, 0.9);
 
   --font-heading: var(--font-montserrat);
   --font-body: var(--font-inter);
   --font-logo: var(--font-mirra), cursive;
+}
+
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
 }
 
 html {

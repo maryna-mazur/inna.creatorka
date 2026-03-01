@@ -17,7 +17,7 @@ export default function MobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="md:hidden ml-3">
+    <div className="lg:hidden ml-3">
       <button
         className="flex flex-col gap-1.5"
         onClick={() => setOpen(!open)}

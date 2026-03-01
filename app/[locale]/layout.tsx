@@ -57,7 +57,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${montserrat.variable} ${inter.variable} ${mirra.variable} font-body antialiased h-[100vh]`}
+        className={`${montserrat.variable} ${inter.variable}  ${mirra.variable} font-body antialiased h-[100vh] `}
       >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
