@@ -21,11 +21,26 @@
     "tag4": "Methodology",
     "tag5": "Team formats"
   },
+
   "About": {
-    "title": "About me"
+    "title": "My path",
+    "item1Title": "Marketing, business & systems thinking",
+    "item1": "<b>Master's degree in Marketing</b>, <b>16 years in marketing and advertising</b> — from sales manager to <b>Commercial Director of a full-cycle advertising agency</b>.\nThis taught me how to create strong products and turn ideas into real, working projects.",
+
+    "item2Title": "Deep understanding of people",
+    "item2": "For <b>over 10 years</b> I've been exploring self-development and inner transformation.\nI saw firsthand how beliefs and convictions shape decisions and quality of life.\nThat's why I <b>combined marketing with tools for deep self-discovery</b>.",
+
+    "item3Title": "Creating transformational products",
+    "item3": "For 2 years, I've been creating <b>original metaphorical associative cards</b> and running individual and group sessions.\nI help experts and companies create transformational products and professionally package their expertise.\n\nWhen a person understands themselves — they manage life and business with ease.",
+
+    "conclusion": "My strength — the fusion of deep self-discovery and strategic business thinking."
   },
+
   "ExpressAnalysis": {
-    "title": "Express Reading"
+    "title": "Express reading",
+    "badge": "special offer",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+    "cta": "Get a reading"
   },
   "Services": {
     "title": "Services"
