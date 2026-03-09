@@ -13,10 +13,10 @@ export default function AboutItem({ num, title, text }: AboutItemProps) {
         /{num}
       </span>
       <div>
-        <h3 className="font-heading text-primary uppercase text-sm md:text-base xl:text-xl 3xl:text-3xl 4xl:text-4xl font-semibold tracking-wide mb-1">
+        <h3 className="font-heading text-primary uppercase text-sm md:text-base xl:text-xl 3xl:text-3xl font-semibold tracking-wide mb-1">
           {title}
         </h3>
-        <p className="font-body text-text text-xs md:text-sm xl:text-base 2xl:text-[17.5px] 3xl:text-2xl 4xl:text-3xl tracking-wide">
+        <p className="font-body text-text text-xs md:text-sm xl:text-base 2xl:text-[17.5px] 3xl:text-2xl tracking-wide">
           {text}
         </p>
       </div>
