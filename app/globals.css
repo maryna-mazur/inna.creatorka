@@ -7,7 +7,7 @@
   --color-primary: #3b2314;
   --color-primary-dark: #2a1a0e;
   --color-accent: #d4bfb0;
-  --color-accent-dark: #e89a66;
+  --color-accent-dark: #A0522D;
   --color-text: #2d2420;
   --color-text-light: #7a6b5d;
   --color-teal: #308e8e;
@@ -30,4 +30,8 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.h-viewport {
+  height: 100lvh;
 }

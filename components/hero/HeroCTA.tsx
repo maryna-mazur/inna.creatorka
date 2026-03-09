@@ -25,7 +25,7 @@ export default function HeroCTA() {
 
       <Link
         href="#services"
-        className="group relative inline-flex flex-col items-center justify-center outline-none [&]:[-webkit-tap-highlight-color:transparent] [&]:[-webkit-touch-callout:none] select-none focus:outline-none focus-visible:outline-none w-28 h-28 sm:w-30 sm:h-30 md:w-50 md:h-50 lg:w-48 lg:h-48 2xl:w-42 2xl:h-42 3xl:w-58 3xl:h-58 4xl:w-70 4xl:h-70 bottom-[18vh] sm:bottom-[11vh] md:bottom-[13vh] lg:left-[1vw] xl:bottom-0 xl:left-0 2xl:-left-[1vw] 3xl:-left-[2vw] 4xl:left-[1vw]"
+        className="group relative inline-flex flex-col items-center justify-center outline-none [&]:[-webkit-tap-highlight-color:transparent] [&]:[-webkit-touch-callout:none] select-none focus:outline-none focus-visible:outline-none w-28 h-28 sm:w-30 sm:h-30 md:w-50 md:h-50 lg:w-48 lg:h-48 2xl:w-42 2xl:h-42 3xl:w-58 3xl:h-58 4xl:w-70 4xl:h-70 bottom-[18lvh] sm:bottom-[11lvh] md:bottom-[13lvh] lg:left-[1vw] xl:bottom-0 xl:left-0 2xl:-left-[1vw] 3xl:-left-[2vw] 4xl:left-[1vw]"
       >
         <div
           className="blob-main absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
