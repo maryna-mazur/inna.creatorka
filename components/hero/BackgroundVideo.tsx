@@ -31,7 +31,6 @@ export default function BackgroundVideo() {
         preload="auto"
         className="w-full h-full object-cover"
         src="/hero-bg-ios.mp4"
-        poster="/hero-poster.jpg"
       />
     </div>
   );
