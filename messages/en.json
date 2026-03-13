@@ -37,10 +37,23 @@
   },
 
   "ExpressAnalysis": {
-    "title": "Express reading",
+    "title": "Your next step",
+    "subtitle": "Focus • Resource • Action",
     "badge": "special offer",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    "cta": "Get a reading"
+    "intro": "Sometimes one precise insight is enough to see the situation in a new light.",
+    "description": "An online express reading with 3 metaphorical cards that will help you:",
+    "benefit1": "understand what to focus on right now",
+    "benefit2": "feel your inner resource",
+    "benefit3": "define your next action",
+    "howTitle": "How it works",
+    "step1": "Pay for access",
+    "step2": "Intuitively choose 3 cards online",
+    "step3": "Receive a personal interpretation: Focus • Resource • Action",
+    "feature1": "Online format",
+    "feature2": "Interactive experience",
+    "feature3": "Results in minutes",
+    "price": "333 UAH",
+    "cta": "Choose your cards"
   },
   "Services": {
     "title": "Services"

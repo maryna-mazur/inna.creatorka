@@ -36,10 +36,23 @@
     "conclusion": "Моя сила — поєднання глибини самопізнання та стратегічного бізнес-мислення."
   },
   "ExpressAnalysis": {
-    "title": "Експрес розбір",
+    "title": "Твій наступний крок",
+    "subtitle": "Фокус • Ресурс • Дія",
     "badge": "спецпропозиція",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-    "cta": "Отримати розбір"
+    "intro": "Іноді достатньо одного точного інсайту, щоб побачити ситуацію по-новому.",
+    "description": "Онлайн експрес-розбір з 3 метафоричними картами, який допоможе:",
+    "benefit1": "зрозуміти на чому зараз краще фокусуватися",
+    "benefit2": "відчути свій ресурс",
+    "benefit3": "визначити наступну дію",
+    "howTitle": "Як це працює",
+    "step1": "Оплачуєш доступ",
+    "step2": "Інтуїтивно обираєш 3 картки онлайн",
+    "step3": "Отримуєш персональне пояснення: Фокус • Ресурс • Дія",
+    "feature1": "Онлайн формат",
+    "feature2": "Інтерактивний досвід",
+    "feature3": "Результат за кілька хвилин",
+    "price": "333 грн",
+    "cta": "Обрати свої картки"
   },
   "Services": {
     "title": "Послуги"
