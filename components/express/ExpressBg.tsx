@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { BlurLayer, BlurLayerProps } from "@/components/express/BlurLayer";
 import { useIsHorizontalLayout } from "@/hooks/useIsLandscape";
 
@@ -16,6 +17,22 @@ const verticalBlurLayers: Omit<BlurLayerProps, "direction">[] = [
 
 export default function ExpressBg() {
   const isHorizontal = useIsHorizontalLayout();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+
+    const promise = video.play();
+    if (promise !== undefined) {
+      promise.catch((error) => {
+        console.warn("Express video autoplay was prevented:", error);
+      });
+    }
+  }, []);
 
   return (
     <div className="absolute inset-0 w-full h-full">
@@ -25,11 +42,13 @@ export default function ExpressBg() {
         }`}
       >
         <video
-          src="/express/bg.mp4"
+          ref={videoRef}
+          src="/express/bg.MP4"
           autoPlay
-          loop
           muted
+          loop
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
           style={{ transform: "scaleX(-1)", objectPosition: "center 30%" }}
         />
