@@ -2,8 +2,6 @@ export default function ArrowLongIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 2048 730"
-      width="60"
-      height="21"
       fill="currentColor"
       className={className}
       aria-hidden="true"

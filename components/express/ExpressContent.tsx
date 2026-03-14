@@ -13,7 +13,7 @@ export default function ExpressContent() {
     <div
       className={`
         relative z-20
-        flex flex-col h-full
+        flex flex-col h-full mb-4
         ${
           isHorizontal
             ? "justify-center w-[50%] xl:w-[53%] 2xl:w-[48%] px-8 xl:px-10 3xl:px-16 4xl:px-20 pb-0"
@@ -26,7 +26,7 @@ export default function ExpressContent() {
           font-heading text-primary uppercase font-bold
           leading-tight mb-1 mt-2
           ${isHorizontal 
-            ? "lg:text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl mb-4 lg:mt-12 2xl:mb-6 3xl:mt-18 4xl:mt-24" 
+            ? "lg:text-3xl xl:text-4xl 3xl:text-5xl 4xl:text-6xl mb-4 lg:mt-12 2xl:mb-6 3xl:mt-18 4xl:mt-24" 
             : "text-2xl sm:text-3xl md:text-4xl lg:text-6xl md:mb-2 lg:mb-4"}
         `}
       >
@@ -49,7 +49,7 @@ export default function ExpressContent() {
           bg-bg-dark rounded-2xl
           ${isHorizontal 
             ? "p-6 mb-6 xl:px-8 xl:py-6 3xl:px-12 3xl:py-10 4xl:px-16 4xl:py-12 4xl:mb-12" 
-            : "p-5 md:p-6 mb-3 md:mb-6 lg:mb-10"}
+            : "p-5 md:p-6 mb-5 md:mb-6 lg:mb-10"}
         `}
       >
         <p

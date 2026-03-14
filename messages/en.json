@@ -56,15 +56,69 @@
     "cta": "Choose your cards"
   },
   "Services": {
-    "title": "Services"
+    "title": "Services",
+    "heading": "My services",
+
+    "card1Title": "For yourself",
+    "card1Feature1": "Express diagnostics with 3 cards",
+    "card1Feature2": "Individual MAC session",
+    "card1Feature3": "Personal guidance",
+    "card1Price": "from 333",
+    "card1Currency": "UAH",
+    "card1Cta": "sign up",
+
+    "card2Title": "For practitioners",
+    "card2Feature1": "Custom MAC concepts — turnkey",
+    "card2Feature2": "Notebooks, books, illustrations",
+    "card2Feature3": "Methodology training",
+    "card2Feature4": "Implementation consulting",
+    "card2Price": "from 1 800",
+    "card2Currency": "UAH",
+    "card2Cta": "learn more",
+
+    "card3Title": "For companies",
+    "card3Feature1": "Group MAC sessions for teams",
+    "card3Feature2": "Custom branded tools",
+    "card3Feature3": "HR program integration",
+    "card3Feature4": "Trainings & workshops",
+    "card3Feature5": "Methodology licensing",
+    "card3Price": "from 9 000",
+    "card3Currency": "UAH",
+    "card3Cta": "order development",
+    "photoPlaceholder": "photo"
   },
   "FAQ": {
-    "title": "Frequently Asked Questions"
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to everything you're curious about",
+
+    "q1": "What are MAC cards and how do they work?",
+    "a1": "MAC (metaphorical associative cards) are a tool for working with the subconscious through imagery. You intuitively choose cards, and I help interpret their meaning in the context of your inquiry. This is not fortune-telling — it's a structured methodology for self-discovery and decision-making.",
+
+    "q2": "How does the online express diagnostics work?",
+    "a2": "You pay for access, intuitively choose 3 cards online, and receive a personal interpretation across three dimensions: Focus, Resource, and Action. The whole process takes just a few minutes and is available from any device.",
+
+    "q3": "Is this fortune-telling with cards?",
+    "a3": "No. MAC is a scientifically grounded psychological tool that works with associations and metaphors. The cards help you see your situation from a new angle and find answers that are already within you.",
+
+    "q4": "What's the difference between express diagnostics and an individual session?",
+    "a4": "Express diagnostics is a quick online format with 3 cards for a specific question. An individual session is deeper one-on-one work where we explore your situation comprehensively using various card decks and techniques.",
+
+    "q5": "Do you work with companies and teams?",
+    "a5": "Yes! I conduct group MAC sessions for teams, create custom branded tools, integrate methodology into HR programs, and run trainings and workshops. Methodology licensing is also available.",
+
+    "q6": "How do I pay?",
+    "a6": "Payment is made online through a secure payment system. After payment, you immediately get access to the selected service. If you have any questions about payment — reach out to me on Telegram or Instagram."
   },
   "Footer": {
-    "copyright": "© 2026 Inna Creatorka. All rights reserved.",
-    "telegram": "Telegram",
-    "instagram": "Instagram"
+    "headline": "Creating transformations together",
+    "brand": "Inna Creator, 2026",
+    "rights": "All rights reserved. Use of site materials without permission is prohibited.",
+    "navTitle": "Navigation",
+    "docsTitle": "Documents",
+    "offer": "Public offer agreement",
+    "privacy": "Privacy policy",
+    "illustrationsTitle": "About illustrations",
+    "illustrationsText": "Illustrations created using <b>AI tools</b> under a commercial license. All images are the intellectual property of the author."
   },
   "Cards": {}
 }
