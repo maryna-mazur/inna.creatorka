@@ -21,7 +21,7 @@ export default async function HomePage({
       <ExpressSection />
       <Services />
       <Faq />
-      {/*<Footer />*/}
+      <Footer />
     </main>
   );
 }
