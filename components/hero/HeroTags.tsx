@@ -54,7 +54,7 @@ const tags: Tag[] = [
     arrowClass: "scale-x-[-1] rotate-x-[2] relative -right-[13vw] -bottom-[4lvh] sm:-right-[20vw] sm:bottom-[5lvh] sm:rotate-[45deg] md:-right-[2vw] md:bottom-[2lvh] md:rotate-[30deg] xl:rotate-0 xl:bottom-0",
     side: "right",
     mobilePosition: "relative -right-[27vw] -bottom-[18lvh] sm:absolute sm:right-[7vw] sm:bottom-[9lvh] md:right-[7vw] md:bottom-[10lvh] lg:bottom-[10lvh]",
-    desktopPosition: "xl:right-[5vw] 2xl:right-[8vw] 3xl:right-[7vw] 4xl:right-[8vw] xl:top-[63lvh] xl:bottom-auto",
+    desktopPosition: "xl:right-[3vw] 2xl:right-[8vw] 3xl:right-[7vw] 4xl:right-[8vw] xl:top-[60lvh] xl:bottom-auto",
   },
 ];
 

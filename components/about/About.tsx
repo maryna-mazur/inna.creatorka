@@ -10,14 +10,14 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-bg flex flex-col justify-evenly items-center gap-4 md:gap-6 lg:gap-8 overflow-hidden py-6 md:py-8 lg:py-10 xl:py-12"
+      className="bg-bg min-h-screen flex flex-col justify-evenly items-center gap-4 md:gap-6 lg:gap-8 overflow-hidden py-6 md:py-8 lg:py-10 xl:py-12"
     >
-      <div className="mx-auto max-w-[1400px] 3xl:max-w-[1600px] 4xl:max-w-[1800px] sm:px-8 md:px-10 lg:px-16 xl:px-20">
-        <h2 className="relative font-heading text-primary text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase mb-4 md:mb-6 lg:mb-8 xl:mb-10 px-6 sm:px-0">
+      <div className="mx-auto max-w-[1400px] 3xl:max-w-[1600px] 4xl:max-w-[1800px] px-6 sm:px-8 md:px-10 lg:px-16 xl:px-20">
+        <h2 className="relative font-heading text-primary text-3xl md:text-4xl lg:text-5xl xl:text-4xl 3xl:text-5xl 4xl:text-6xl font-bold uppercase mb-4 md:mb-6 lg:mb-8 xl:mb-10">
           {t("title")}
         </h2>
 
-        <div className="flex flex-col gap-3 md:gap-3 px-6 sm:px-0">
+        <div className="flex flex-col gap-3 md:gap-3">
           {items.map((num) => (
             <AboutItem
               key={num}

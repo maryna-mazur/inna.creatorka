@@ -21,11 +21,53 @@ export default function HeroCTA() {
         .blob-main {
           animation: blobMorph 5s ease-in-out infinite;
         }
+
+        @media (min-aspect-ratio: 16/9) and (min-width: 1024px) {
+          .hero-cta {
+            width: 7.5rem;
+            height: 7.5rem;
+          }
+          .hero-cta-text {
+            font-size: 9px;
+            max-width: 5.5rem;
+          }
+          .hero-cta-arrow {
+            width: 3rem;
+          }
+        }
+
+        @media (min-aspect-ratio: 16/9) and (min-width: 1280px) {
+          .hero-cta {
+            width: 9rem;
+            height: 9rem;
+          }
+          .hero-cta-text {
+            font-size: 11px;
+            max-width: 6rem;
+          }
+          .hero-cta-arrow {
+            width: 4rem;
+          }
+        }
+
+        @media (min-aspect-ratio: 16/9) and (min-width: 1920px) {
+          .hero-cta {
+            width: 11rem;
+            height: 11rem;
+          }
+          .hero-cta-text {
+            font-size: 14px;
+            max-width: 8rem;
+          }
+          .hero-cta-arrow {
+            width: 5rem;
+          }
+        }
       `}</style>
 
       <Link
         href="#services"
-        className="group relative inline-flex flex-col items-center justify-center outline-none [&]:[-webkit-tap-highlight-color:transparent] [&]:[-webkit-touch-callout:none] select-none focus:outline-none focus-visible:outline-none w-28 h-28 sm:w-30 sm:h-30 md:w-50 md:h-50 lg:w-48 lg:h-48 2xl:w-42 2xl:h-42 3xl:w-58 3xl:h-58 4xl:w-70 4xl:h-70 bottom-[18lvh] sm:bottom-[11lvh] md:bottom-[13lvh] lg:left-[1vw] xl:bottom-0 xl:left-0 2xl:-left-[1vw] 3xl:-left-[2vw] 4xl:left-[1vw]"
+        className="hero-cta group relative inline-flex flex-col items-center justify-center outline-none [&]:[-webkit-tap-highlight-color:transparent] [&]:[-webkit-touch-callout:none] select-none focus:outline-none focus-visible:outline-none w-28 h-28 sm:w-30 sm:h-30 md:w-50 md:h-50 lg:w-48 lg:h-48 2xl:w-42 2xl:h-42 3xl:w-58 3xl:h-58 4xl:w-70 4xl:h-70 bottom-[18lvh] sm:bottom-[11lvh] md:bottom-[13lvh] lg:left-[1vw] xl:bottom-0 xl:left-0 2xl:-left-[1vw] 3xl:-left-[2vw] 4xl:left-[1vw]"
       >
         <div
           className="blob-main absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
@@ -36,7 +78,7 @@ export default function HeroCTA() {
         />
 
         <span
-          className="relative z-10 font-heading max-w-[7rem] 3xl:max-w-[10rem] 4xl:max-w-[12rem] text-center  mt-2 -mb-2
+          className="hero-cta-text relative z-10 font-heading max-w-[7rem] 3xl:max-w-[10rem] 4xl:max-w-[12rem] text-center mt-2 -mb-2
                      text-[10px] sm:text-xs md:text-base 2xl:text-base 3xl:text-lg 4xl:text-2xl uppercase font-semibold tracking-widest
                      text-primary leading-snug
                      group-hover:text-accent group-active:text-accent transition-colors duration-300"
@@ -45,7 +87,7 @@ export default function HeroCTA() {
         </span>
 
         <ArrowLongIcon
-          className="relative z-10 w-16 sm:w-14 md:w-24 lg:w-20 2xl:w-24 3xl:w-28 4xl:w-36 h-auto mt-1 sm:mt-2
+          className="hero-cta-arrow relative z-10 w-16 sm:w-14 md:w-24 lg:w-20 2xl:w-24 3xl:w-28 4xl:w-36 h-auto mt-1 sm:mt-2
                      text-primary/70
                      group-hover:text-accent group-hover:translate-x-1
                      group-active:text-accent group-active:translate-x-1
