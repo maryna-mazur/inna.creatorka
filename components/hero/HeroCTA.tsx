@@ -22,7 +22,7 @@ export default function HeroCTA() {
           animation: blobMorph 5s ease-in-out infinite;
         }
 
-        @media (min-aspect-ratio: 16/9) and (min-width: 1024px) {
+        @media (min-aspect-ratio: 2/1) and (min-width: 1024px) {
           .hero-cta {
             width: 7.5rem;
             height: 7.5rem;
@@ -36,7 +36,7 @@ export default function HeroCTA() {
           }
         }
 
-        @media (min-aspect-ratio: 16/9) and (min-width: 1280px) {
+        @media (min-aspect-ratio: 2/1) and (min-width: 1280px) {
           .hero-cta {
             width: 9rem;
             height: 9rem;
@@ -50,7 +50,7 @@ export default function HeroCTA() {
           }
         }
 
-        @media (min-aspect-ratio: 16/9) and (min-width: 1920px) {
+        @media (min-aspect-ratio: 2/1) and (min-width: 1920px) {
           .hero-cta {
             width: 11rem;
             height: 11rem;
