@@ -28,9 +28,6 @@
   --breakpoint-4xl: 2560px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 .h-viewport {
   height: 100lvh;
