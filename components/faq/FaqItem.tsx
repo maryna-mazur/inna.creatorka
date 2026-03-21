@@ -15,7 +15,7 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
       <button
         onClick={() => setOpen(!open)}
         aria-expanded={open}
-        className="w-full flex items-center justify-between gap-4 p-5 md:p-6 lg:p-7 xl:p-8 3xl:p-10 4xl:p-12 cursor-pointer text-left"
+        className="w-full flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer text-left"
       >
         <span className="font-heading text-primary text-sm md:text-base lg:text-lg xl:text-xl 3xl:text-2xl 4xl:text-3xl font-medium tracking-wide">
           {question}
