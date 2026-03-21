@@ -13,11 +13,11 @@ export default function Faq() {
   return (
     <section
       id="faq"
-      className="flex flex-col justify-center items-center bg-bg-dark py-8 lg:py-10 xl:py-12 min-h-screen 3xl:py-14 4xl:py-18"
+      className="flex flex-col justify-center items-center bg-bg-dark py-6 md:py-8 lg:py-10 xl:py-12 min-h-screen 3xl:py-14 4xl:py-18"
     >
       <div className="mx-auto max-w-[1400px] 3xl:max-w-[1600px] 4xl:max-w-[1800px] px-6 sm:px-8 md:px-10 lg:px-16 xl:px-20 mb-4">
-        <h2 className={`font-heading text-primary 
-                text-3xl md:text-4xl ${isHorizontal ? "lg:text-3xl" : "lg:text-5xl"} xl:text-4xl 3xl:text-5xl 4xl:text-6xl 
+        <h2 className={`font-heading text-primary
+                text-3xl md:text-4xl ${isHorizontal ? "lg:text-3xl xl:text-3xl 3xl:text-4xl" : "lg:text-5xl xl:text-4xl 3xl:text-5xl"} 4xl:text-6xl
                 font-bold uppercase mb-2 md:mb-3 text-center`}>
           {t("title")}
         </h2>

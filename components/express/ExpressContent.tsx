@@ -25,9 +25,9 @@ export default function ExpressContent() {
         className={`
           font-heading text-primary uppercase font-bold
           leading-tight mb-1 mt-2
-          ${isHorizontal 
-            ? "lg:text-3xl xl:text-4xl 3xl:text-5xl 4xl:text-6xl mb-4 lg:mt-12 2xl:mb-6 3xl:mt-18 4xl:mt-24" 
-            : "text-2xl sm:text-3xl md:text-4xl lg:text-6xl md:mb-2 lg:mb-4"}
+          ${isHorizontal
+            ? "lg:text-3xl xl:text-3xl 3xl:text-4xl 4xl:text-6xl mb-4 lg:mt-12 2xl:mb-6 3xl:mt-18 4xl:mt-24"
+            : "text-3xl md:text-4xl lg:text-5xl xl:text-4xl 3xl:text-5xl 4xl:text-6xl md:mb-2 lg:mb-4"}
         `}
       >
         {t("title")}

@@ -12,7 +12,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className={`bg-bg py-6 md:py-8 lg:py-10 ${isHorizontal ? "xl:py-8 3xl:py-10 4xl:py-10" : "xl:py-12 4xl:py-20"} md:min-h-screen md:flex md:flex-col ${
+      className={`bg-bg py-6 md:py-8 lg:py-10 xl:py-12 3xl:py-14 4xl:py-18 md:min-h-screen md:flex md:flex-col ${
         isHorizontal ? "md:h-screen md:overflow-hidden" : ""
       }`}
     >
@@ -24,7 +24,7 @@ export default function Services() {
         <h2
           className={`font-heading text-primary
             text-3xl md:text-4xl ${isHorizontal ? "lg:text-3xl xl:text-3xl 3xl:text-4xl" : "lg:text-5xl xl:text-4xl 3xl:text-5xl"} 4xl:text-6xl font-bold uppercase
-            mb-4 md:mb-4 ${isHorizontal ? "lg:mb-4 xl:mb-5 3xl:mb-6 4xl:mb-6" : "lg:mb-10 xl:mb-8 4xl:mb-8"} shrink-0`}
+            mb-4 md:mb-6 ${isHorizontal ? "lg:mb-4 xl:mb-5 3xl:mb-6 4xl:mb-6" : "lg:mb-8 xl:mb-10 4xl:mb-10"} shrink-0`}
         >
           {t("heading")}
         </h2>
