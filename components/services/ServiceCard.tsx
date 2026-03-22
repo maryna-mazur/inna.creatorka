@@ -53,11 +53,11 @@ export default function ServiceCard({
               <ServiceFeatures
                 features={features}
                 listClassName="gap-0.5 md:gap-0.5 lg:gap-0.5 mb-2 md:mb-2 lg:mb-3 xl:mb-3 3xl:mb-3"
-                itemClassName="gap-1.5 md:gap-2 lg:gap-1 2xl:gap-2 3xl:gap-3 4xl:gap-3.5 lg:text-[10px] xl:text-xs 2xl:text-sm 3xl:text-base 4xl:text-[20px]"
+                itemClassName="gap-1.5 md:gap-2 lg:gap-1 2xl:gap-2 3xl:gap-3 4xl:gap-3.5 lg:text-[10px] xl:text-xs 2xl:text-[12px] 3xl:text-base 4xl:text-[20px]"
               />
             </div>
 
-            <div className="flex items-center justify-between mt-3 lg:mt-1 xl:mt-3">
+            <div className="flex items-center justify-between mt-3 lg:mt-1">
               <ServiceCta
                 cta={cta}
                 className={`gap-2 md:gap-3 px-5 py-2
