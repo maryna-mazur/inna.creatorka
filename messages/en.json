@@ -53,7 +53,8 @@
     "feature2": "Interactive experience",
     "feature3": "Results in minutes",
     "price": "333 UAH",
-    "cta": "Get your answer"
+    "cta": "Get your answer",
+    "loading": "Loading..."
   },
   "Services": {
     "title": "Services",
