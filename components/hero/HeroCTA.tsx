@@ -81,7 +81,7 @@ export default function HeroCTA() {
           className="hero-cta-text relative z-10 font-heading max-w-[7rem] 3xl:max-w-[10rem] 4xl:max-w-[12rem] text-center mt-2 -mb-2
                      text-[10px] sm:text-xs md:text-base 2xl:text-base 3xl:text-lg 4xl:text-2xl uppercase font-semibold tracking-widest
                      text-primary leading-snug
-                     group-hover:text-accent group-active:text-accent transition-colors duration-300"
+                     group-hover:text-bg group-active:text-bg transition-colors duration-300"
         >
           {t("cta")}
         </span>
@@ -89,8 +89,8 @@ export default function HeroCTA() {
         <ArrowLongIcon
           className="hero-cta-arrow relative z-10 w-16 sm:w-14 md:w-24 lg:w-20 2xl:w-24 3xl:w-28 4xl:w-36 h-auto mt-1 sm:mt-2
                      text-primary/70
-                     group-hover:text-accent group-hover:translate-x-1
-                     group-active:text-accent group-active:translate-x-1
+                     group-hover:text-bg group-hover:translate-x-1
+                     group-active:text-bg group-active:translate-x-1
                      transition-all duration-300"
         />
       </Link>
