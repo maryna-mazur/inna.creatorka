@@ -12,7 +12,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className={`bg-bg py-6 md:py-8 lg:py-10 xl:py-12 3xl:py-14 4xl:py-18 md:min-h-screen md:flex md:flex-col ${
+      className={`bg-bg py-6 md:py-8 lg:py-6 xl:py-8 3xl:py-12 4xl:py-14 md:min-h-screen md:flex md:flex-col ${
         isHorizontal ? "md:h-screen md:overflow-hidden" : ""
       }`}
     >
@@ -29,7 +29,7 @@ export default function Services() {
           {t("heading")}
         </h2>
 
-        <div className={"flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-3 lg:gap-4 " + (isHorizontal ? "xl:gap-4 3xl:gap-5 " : "xl:gap-6 ") + (
+        <div className={"flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-3 lg:gap-2 " + (isHorizontal ? "xl:gap-4 3xl:gap-5 " : "xl:gap-6 ") + (
           isHorizontal
             ? "md:items-center md:grid-rows-2 md:flex-1 md:min-h-0 4xl:max-h-[85vh]"
             : ""
@@ -43,7 +43,6 @@ export default function Services() {
             price={t("card1Price")}
             currency={t("card1Currency")}
             cta={t("card1Cta")}
-            photoPlaceholder={t("photoPlaceholder")}
           />
 
           <ServiceCard
@@ -55,7 +54,6 @@ export default function Services() {
             price={t("card2Price")}
             currency={t("card2Currency")}
             cta={t("card2Cta")}
-            photoPlaceholder={t("photoPlaceholder")}
           />
 
           <div
@@ -77,7 +75,6 @@ export default function Services() {
             price={t("card3Price")}
             currency={t("card3Currency")}
             cta={t("card3Cta")}
-            photoPlaceholder={t("photoPlaceholder")}
           />
         </div>
       </div>
