@@ -7,9 +7,9 @@ export async function POST(request: NextRequest) {
   const merchantAccount = process.env.WAYFORPAY_MERCHANT_ACCOUNT;
   const merchantSecret = process.env.WAYFORPAY_MERCHANT_SECRET;
   const merchantDomain = process.env.WAYFORPAY_MERCHANT_DOMAIN;
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `https://${request.headers.get("host")}`;
 
-  if (!merchantAccount || !merchantSecret || !merchantDomain || !baseUrl) {
+  if (!merchantAccount || !merchantSecret || !merchantDomain) {
     return NextResponse.json(
       { error: "Payment configuration missing" },
       { status: 500 }
