@@ -1,5 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
-import { redirect } from "@/i18n/navigation";
+import { redirect } from "next/navigation";
 import { createAccessToken, verifyAccessToken } from "@/lib/crypto";
 import { isUsed, markAsUsed } from "@/lib/token-store";
 import { isPaymentApproved } from "@/lib/payment-store";
@@ -19,35 +19,32 @@ export default async function ExpressReadingPage({
   const secret = process.env.ACCESS_TOKEN_SECRET;
 
   if (!secret) {
-    return redirect({ href: "/", locale });
+    redirect(`/${locale}`);
   }
 
   // Step 1: User returned from WayForPay with orderReference — verify payment and create token
   if (orderReference && !token) {
     const paid = await isPaymentApproved(orderReference);
     if (!paid) {
-      return redirect({ href: "/", locale });
+      redirect(`/${locale}`);
     }
     const accessToken = createAccessToken(orderReference, secret);
-    return redirect({
-      href: `/express-reading?token=${accessToken}`,
-      locale,
-    });
+    redirect(`/${locale}/express-reading?token=${accessToken}`);
   }
 
   // Step 2: Validate token
   if (!token) {
-    return redirect({ href: "/", locale });
+    redirect(`/${locale}`);
   }
 
   const result = verifyAccessToken(token, secret);
 
   if (!result.valid) {
-    return redirect({ href: "/", locale });
+    redirect(`/${locale}`);
   }
 
   if (isUsed(token)) {
-    return redirect({ href: "/", locale });
+    redirect(`/${locale}`);
   }
 
   // Mark token as used (one-time access)
