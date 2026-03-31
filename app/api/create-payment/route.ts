@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 import { generateWayForPaySignature } from "@/lib/crypto";
+import { createPayment } from "@/lib/payment-store";
 
 export async function POST(request: NextRequest) {
   const merchantAccount = process.env.WAYFORPAY_MERCHANT_ACCOUNT;
@@ -55,6 +56,8 @@ export async function POST(request: NextRequest) {
     returnUrl: `${baseUrl}/${locale}/express-reading?orderReference=${orderReference}`,
     serviceUrl: `${baseUrl}/api/wayforpay-callback`,
   };
+
+  await createPayment(orderReference);
 
   return NextResponse.json(formData);
 }
