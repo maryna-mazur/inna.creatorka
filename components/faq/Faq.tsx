@@ -21,7 +21,7 @@ export default function Faq() {
                 font-bold uppercase mb-2 md:mb-3 text-center`}>
           {t("title")}
         </h2>
-        <p className="font-body text-text-light text-xs md:text-sm lg:text-base xl:text-lg 3xl:text-xl 4xl:text-2xl tracking-wide mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-center">
+        <p className="font-body text-text-light text-xs md:text-sm lg:text-sm xl:text-base 3xl:text-lg 4xl:text-xl tracking-wide mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-center">
           {t("subtitle")}
         </p>
 

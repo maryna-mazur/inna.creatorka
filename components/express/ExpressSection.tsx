@@ -10,8 +10,8 @@ export default function ExpressSection() {
   return (
     <section
       id="express"
-      className={`relative min-h-screen overflow-hidden bg-bg 
-        ${isHorizontal ? "flex justify-end" : "flex flex-col justify-end"}`}
+      className={`relative overflow-hidden bg-bg
+        ${isHorizontal ? "h-screen flex justify-end" : "min-h-screen flex flex-col justify-end"}`}
     >
       <ExpressBg />
       <ExpressContent />
