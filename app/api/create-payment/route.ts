@@ -4,10 +4,10 @@ import { generateWayForPaySignature } from "@/lib/crypto";
 import { createPayment } from "@/lib/payment-store";
 
 export async function POST(request: NextRequest) {
-  const merchantAccount = process.env.WAYFORPAY_MERCHANT_ACCOUNT;
-  const merchantSecret = process.env.WAYFORPAY_MERCHANT_SECRET;
-  const merchantDomain = process.env.WAYFORPAY_MERCHANT_DOMAIN;
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `https://${request.headers.get("host")}`;
+  const merchantAccount = process.env.WAYFORPAY_MERCHANT_ACCOUNT?.trim();
+  const merchantSecret = process.env.WAYFORPAY_MERCHANT_SECRET?.trim();
+  const merchantDomain = process.env.WAYFORPAY_MERCHANT_DOMAIN?.trim();
+  const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || `https://${request.headers.get("host")}`).trim();
 
   if (!merchantAccount || !merchantSecret || !merchantDomain) {
     return NextResponse.json(

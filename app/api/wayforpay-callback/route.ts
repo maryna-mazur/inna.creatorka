@@ -3,7 +3,7 @@ import { generateWayForPaySignature } from "@/lib/crypto";
 import { approvePayment } from "@/lib/payment-store";
 
 export async function POST(request: NextRequest) {
-  const merchantSecret = process.env.WAYFORPAY_MERCHANT_SECRET;
+  const merchantSecret = process.env.WAYFORPAY_MERCHANT_SECRET?.trim();
 
   if (!merchantSecret) {
     return NextResponse.json({ status: "decline" });
