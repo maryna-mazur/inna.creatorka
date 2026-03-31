@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
     productName: [productName],
     productCount: [productCount],
     productPrice: [productPrice],
-    returnUrl: `${baseUrl}/${locale}/express-reading?orderReference=${orderReference}`,
+    returnUrl: `${baseUrl}/api/payment-return?orderReference=${orderReference}`,
     serviceUrl: `${baseUrl}/api/wayforpay-callback`,
   };
 
