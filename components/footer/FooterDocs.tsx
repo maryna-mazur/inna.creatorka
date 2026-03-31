@@ -16,7 +16,7 @@ export default function FooterDocs() {
         {docLinks.map((key, i) => (
           <li key={key} className="contents">
             {i > 0 && <span className="text-accent/30 text-xs lg:hidden">·</span>}
-            <a href="#" className="font-body text-accent/50 lg:text-accent/70
+            <a href={`/${key}`} className="font-body text-accent/50 lg:text-accent/70
                   text-xs md:text-sm lg:text-base 3xl:text-lg 4xl:text-xl
                   hover:text-accent transition-colors">
               {t(key)}

@@ -33,9 +33,40 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://inna-creatorka.com";
+
   return {
     title: t("title"),
     description: t("description"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `${baseUrl}/${locale}`,
+      siteName: "Inna Creatorka",
+      locale: locale === "uk" ? "uk_UA" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: `${baseUrl}/about/photo1.jpg`,
+          width: 1200,
+          height: 630,
+          alt: t("title"),
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: [`${baseUrl}/about/photo1.jpg`],
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        uk: `${baseUrl}/uk`,
+        en: `${baseUrl}/en`,
+      },
+    },
   };
 }
 
