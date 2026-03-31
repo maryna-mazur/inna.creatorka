@@ -33,7 +33,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://inna-creatorka.com";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://inna-creatorka.vercel.app";
 
   return {
     title: t("title"),
