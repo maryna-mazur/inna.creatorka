@@ -42,7 +42,7 @@ export default function Header() {
       <div className="flex items-center justify-between">
 
         <Link
-          href="#"
+          href="/"
           className="font-logo md:font-semibold text-lg sm:text-2xl md:text-4xl lg:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-6xl text-primary"
           style={{ WebkitTextStroke: "0.5px" }}
         >
