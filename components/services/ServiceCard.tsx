@@ -36,7 +36,6 @@ export default function ServiceCard({
             num={num}
             title={title}
             className={mobile ? "mb-4" : "mb-2"}
-            mobile={mobile}
           />
 
           <ServiceFeatures
