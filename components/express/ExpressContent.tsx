@@ -103,7 +103,7 @@ export default function ExpressContent() {
           className={`
             font-body text-text leading-relaxed 
             ${isHorizontal 
-              ? "lg:text-base xl:text-lg 3xl:text-2xl 4xl:text-3xl mb-3 4xl:mb-5" 
+              ? "lg:text-sm xl:text-base 3xl:text-lg 4xl:text-xl mb-3 4xl:mb-5"
               : "text-xs sm:text-sm md:text-base lg:text-xl mb-2"}
           `}
         >
@@ -114,7 +114,7 @@ export default function ExpressContent() {
           className={`
             font-body text-text leading-relaxed 
             ${isHorizontal 
-              ? "lg:text-base xl:text-lg 3xl:text-2xl 4xl:text-3xl mb-2 4xl:mb-4" 
+              ? "lg:text-sm xl:text-base 3xl:text-lg 4xl:text-xl mb-2 4xl:mb-4"
               : "text-xs sm:text-sm md:text-base lg:text-xl mb-1"}
           `}
         >
@@ -124,7 +124,7 @@ export default function ExpressContent() {
           className={`
             font-body text-text leading-relaxed list-disc pl-5 
             ${isHorizontal 
-              ? "lg:text-base xl:text-lg 3xl:text-2xl 4xl:text-3xl mb-5 4xl:mb-7" 
+              ? "lg:text-sm xl:text-base 3xl:text-lg 4xl:text-xl mb-5 4xl:mb-7"
               : "text-xs sm:text-sm md:text-base lg:text-xl mb-3 lg:mb-7"}
           `}
         >
@@ -135,11 +135,11 @@ export default function ExpressContent() {
 
         {isHorizontal && (
           <>
-            <h3 className="font-heading text-primary font-semibold text-ms 3xl:text-2xl 4xl:text-3xl mb-2 4xl:mb-8">
+            <h3 className="font-heading text-primary font-semibold text-base xl:text-lg 3xl:text-xl 4xl:text-2xl mb-2 4xl:mb-8">
               {t("howTitle")}
             </h3>
             <ol className="font-body text-text
-            text-base xl:text-lg 3xl:text-2xl 4xl:text-3xl
+            text-sm xl:text-base 3xl:text-lg 4xl:text-xl
             leading-relaxed list-decimal
             pl-5 mb-5 4xl:mb-10">
               <li>{t("step1")}</li>
@@ -190,7 +190,7 @@ export default function ExpressContent() {
           disabled:opacity-60 disabled:cursor-not-allowed
           ${
             isHorizontal
-              ? "lg:self-end gap-3 lg:text-base 2xl:text-xl 3xl:text-2xl 4xl:text-3xl lg:px-8 lg:py-3 3xl:px-10 3xl:py-5 4xl:px-10 4xl:py-7"
+              ? "lg:self-end gap-3 lg:text-sm xl:text-base 3xl:text-lg 4xl:text-xl lg:px-6 lg:py-2.5 3xl:px-8 3xl:py-4 4xl:px-10 4xl:py-5"
               : "gap-2 text-xs md:text-base px-5 py-2.5 md:px-8 md:py-4 md:mb-2 lg:mb-10"
           }
         `}

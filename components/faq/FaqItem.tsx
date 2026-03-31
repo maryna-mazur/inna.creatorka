@@ -17,7 +17,7 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
         aria-expanded={open}
         className="w-full flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer text-left"
       >
-        <span className="font-heading text-primary text-sm md:text-base lg:text-lg xl:text-xl 3xl:text-2xl 4xl:text-3xl font-medium tracking-wide">
+        <span className="font-heading text-primary text-sm md:text-base lg:text-base xl:text-lg 3xl:text-xl 4xl:text-2xl font-medium tracking-wide">
           {question}
         </span>
 
@@ -46,7 +46,7 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="px-5 md:px-6 lg:px-7 xl:px-8 3xl:px-10 4xl:px-12 pb-5 md:pb-6 lg:pb-7 xl:pb-8 3xl:pb-10 4xl:pb-12 font-body text-text text-xs md:text-sm lg:text-base xl:text-[17px] 3xl:text-lg 4xl:text-xl leading-relaxed tracking-wide">
+          <p className="px-5 md:px-6 lg:px-7 xl:px-8 3xl:px-10 4xl:px-12 pb-5 md:pb-6 lg:pb-7 xl:pb-8 3xl:pb-10 4xl:pb-12 font-body text-text text-xs md:text-sm lg:text-sm xl:text-base 3xl:text-lg 4xl:text-xl leading-relaxed tracking-wide">
             {answer}
           </p>
         </div>

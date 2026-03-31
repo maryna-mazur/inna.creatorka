@@ -17,7 +17,7 @@ export default function AboutItem({ num, title, text, scale = 1 }: AboutItemProp
     <div className={`flex items-start gap-10 md:gap-16 xl:gap-24`}>
       <span
         className={`font-heading text-primary 
-            text-xs md:text-lg ${isHorizontal ? "lg:text-base xl:text-base 3xl:text-xl" : "lg:text-xl"} 4xl:text-4xl 
+            text-xs md:text-lg ${isHorizontal ? "lg:text-base xl:text-lg 3xl:text-xl" : "lg:text-xl"} 4xl:text-2xl
             font-semibold shrink-0`}
         style={mobileStyle}
       >
@@ -26,7 +26,7 @@ export default function AboutItem({ num, title, text, scale = 1 }: AboutItemProp
       <div>
         <h3
           className={`font-heading text-primary uppercase 
-          text-xs md:text-lg ${isHorizontal ? "lg:text-base xl:text-base 3xl:text-xl" : "lg:text-xl"} 
+          text-xs md:text-lg ${isHorizontal ? "lg:text-base xl:text-lg 3xl:text-xl" : "lg:text-xl"} 4xl:text-2xl
           font-semibold tracking-wide mb-1`}
           style={mobileStyle}
         >
@@ -34,7 +34,7 @@ export default function AboutItem({ num, title, text, scale = 1 }: AboutItemProp
         </h3>
         <p
           className={`font-body text-text 
-          text-xs md:text-base ${isHorizontal ? "lg:text-xs xl:text-sm 3xl:text-base" : "lg:text-base"} 2xl:text-[17.5px] 3xl:text-2xl 
+          text-xs md:text-base ${isHorizontal ? "lg:text-sm xl:text-base 3xl:text-lg" : "lg:text-base"} 4xl:text-xl
           tracking-wide`}
           style={mobileBodyStyle}
         >
