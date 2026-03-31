@@ -8,7 +8,7 @@ export function useIsHorizontalLayout() {
   useEffect(() => {
     function check() {
       const w = window.innerWidth;
-      const h = window.innerHeight;
+      const h = window.screen.height;
       setIsHorizontal(w >= 1280 || (w >= 1024 && w > h));
     }
 
