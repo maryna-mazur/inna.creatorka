@@ -1,9 +1,8 @@
 import { setRequestLocale } from "next-intl/server";
-import { redirect } from "next/navigation";
-import { createAccessToken, verifyAccessToken } from "@/lib/crypto";
+import { verifyAccessToken } from "@/lib/crypto";
 import { isUsed, markAsUsed } from "@/lib/token-store";
-import { isPaymentApproved } from "@/lib/payment-store";
 import ExpressReadingClient from "@/components/express-reading/ExpressReadingClient";
+import PaymentVerifier from "@/components/express-reading/PaymentVerifier";
 
 export default async function ExpressReadingPage({
   params,
@@ -16,38 +15,24 @@ export default async function ExpressReadingPage({
   setRequestLocale(locale);
 
   const { token, orderReference } = await searchParams;
-  const secret = process.env.ACCESS_TOKEN_SECRET;
+  const secret = process.env.ACCESS_TOKEN_SECRET?.trim();
 
-  if (!secret) {
-    redirect(`/${locale}`);
-  }
-
-  // Step 1: User returned from WayForPay with orderReference — verify payment and create token
+  // If user returned from WayForPay with orderReference — show polling UI
   if (orderReference && !token) {
-    const paid = await isPaymentApproved(orderReference);
-    if (!paid) {
-      redirect(`/${locale}`);
-    }
-    const accessToken = createAccessToken(orderReference, secret);
-    redirect(`/${locale}/express-reading?token=${accessToken}`);
+    return <PaymentVerifier orderReference={orderReference} locale={locale} />;
   }
 
-  // Step 2: Validate token
-  if (!token) {
-    redirect(`/${locale}`);
+  // Validate token
+  if (!token || !secret) {
+    return <PaymentVerifier error locale={locale} />;
   }
 
   const result = verifyAccessToken(token, secret);
 
-  if (!result.valid) {
-    redirect(`/${locale}`);
+  if (!result.valid || isUsed(token)) {
+    return <PaymentVerifier error locale={locale} />;
   }
 
-  if (isUsed(token)) {
-    redirect(`/${locale}`);
-  }
-
-  // Mark token as used (one-time access)
   markAsUsed(token, result.orderRef!);
 
   return (
