@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateWayForPaySignature } from "@/lib/crypto";
+import { approvePayment } from "@/lib/payment-store";
 
 export async function POST(request: NextRequest) {
   const merchantSecret = process.env.WAYFORPAY_MERCHANT_SECRET;
@@ -48,6 +49,10 @@ export async function POST(request: NextRequest) {
     transactionStatus,
     reasonCode,
   });
+
+  if (transactionStatus === "Approved") {
+    await approvePayment(orderReference);
+  }
 
   const responseTime = new Date().toISOString();
   const responseSignature = generateWayForPaySignature(
